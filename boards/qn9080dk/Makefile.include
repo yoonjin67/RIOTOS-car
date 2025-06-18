@@ -1,0 +1,11 @@
+CFLAGS += \
+  -DCONFIG_BOARD_HAS_XTAL \
+  -DCONFIG_BOARD_HAS_XTAL32K \
+  -DCONFIG_BOARD_HAS_XTAL_32M \
+  #
+
+QN908X_JLINK ?= $(QN9080DK_JLINK)
+JLINK_DEVICE ?= QN9080A
+
+# Include default QN908x board config
+include $(RIOTBOARD)/common/qn908x/Makefile.include
